@@ -1,0 +1,50 @@
+Step: step-credential-initializer-hnl4h:
+
+{"level":"warn","ts":1565729212.3654878,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565729212.3659003,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-r8xht:
+
+{"level":"warn","ts":1565729213.1424649,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565729213.1456935,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-******-environment-******-89t4w:
+
+{"level":"warn","ts":1565729220.2938104,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565729220.693695,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/******/environment-******-production.git @ 9661f3f5a3e52ed396477ee8d188b60568d55d8a in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:9661f3f5a3e52ed396477ee8d188b60568d55d8a,1:224522517bdc670316c4f3d0852bf8da85e3e6d8","time":"2019-08-13T20:47:01Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 224522517bdc670316c4f3d0852bf8da85e3e6d8: 9661f3f5a3e52ed396477ee8d188b60568d55d8a: in ","time":"2019-08-13T20:47:03Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T20:47:03Z"}
+{"level":"debug","msg":"ran git reset --hard 9661f3f5a3e52ed396477ee8d188b60568d55d8a in ","time":"2019-08-13T20:47:03Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T20:47:03Z"}
+{"level":"debug","msg":"ran git merge 224522517bdc670316c4f3d0852bf8da85e3e6d8 in ","time":"2019-08-13T20:47:03Z"}
+MERGED SHA SUBJECT
+224522517  chore: Promote go-demo-6 to version 1.0
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 224522517bdc670316c4f3d0852bf8da85e3e6d8: 9661f3f5a3e52ed396477ee8d188b60568d55d8a: in ","time":"2019-08-13T20:47:04Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-13T20:47:04Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T20:47:04Z"}
+{"level":"debug","msg":"ran git reset --hard 9661f3f5a3e52ed396477ee8d188b60568d55d8a in ","time":"2019-08-13T20:47:04Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T20:47:04Z"}
+{"level":"debug","msg":"ran git merge 224522517bdc670316c4f3d0852bf8da85e3e6d8 in ","time":"2019-08-13T20:47:04Z"}
+MERGED SHA SUBJECT
+224522517  chore: Promote go-demo-6 to version 1.0
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T20:47:04Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T20:47:04Z"}
+{"level":"info","msg":"selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-13T20:47:05Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-13T20:47:06Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for ******-environment-******-production-PR-1-1","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"upserted PipelineResource ******-environment-******-produ for the git repository https://github.com/******/environment-******-production.git and branch PR-1","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"upserted Task ******-environment-******-produ-from-build-pack-1","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"upserted Pipeline ******-environment-******-produ-1","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"created PipelineRun ******-environment-******-produ-1","time":"2019-08-13T20:47:08Z"}
+{"level":"info","msg":"created PipelineStructure ******-environment-******-produ-1","time":"2019-08-13T20:47:08Z"}
